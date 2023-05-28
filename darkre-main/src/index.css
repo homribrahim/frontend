@@ -1,0 +1,105 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root{
+  --colorBlue:#0D47A1;
+  --colorGray:#E7EAF6;
+}
+body {
+  margin: 0;
+ font-family: 'Roboto', sans-serif;
+ background-color: var(--colorGray);
+}
+.text-blue{
+  color: var(--colorBlue);
+}
+.bg-blue{
+background-color:var(--colorBlue) ;
+}
+.text-gray{
+  color: var(--colorGray);
+}
+.bg-gray{
+background-color:var(--colorGray) ;
+}
+.coloritem{
+  color: var(--colorBlue);
+}
+.coloritem::after{
+  content: "";
+  display: block;
+  width: 37px;
+  border-bottom: 3px solid var(--colorBlue);
+ 
+}
+.title::after{
+  content: "";
+  width: 80%;
+  display: block;
+  border-bottom: solid 2px ;
+  margin: auto;
+  
+}
+@media screen  and (max-width:	768px){
+  .links {
+  transform: translateX(-1000px);
+  transition: all 0.5s ease-in-out ;
+
+          }
+  .active  {
+    transform: translateX(0);  
+    background-color: white;
+
+ }
+}
+footer{
+  background-image: url(./bg.jpg);
+ 
+}
+.stat{
+  background-image: url(./bg.jpg);
+}
+.annonce{
+  background-image: url(./WhiteBg.jpg);
+}
+/* card */
+.card:hover .fils{
+  transform: translate(-32px) ;
+  transition: 0.5s ;
+}
+.card:hover .img_card{
+  transform: scale(1.11);
+  transform-origin: right;
+  transition: 0.5s;
+}
+.h-85{
+  height: 21rem;
+}
+
+/* input file */
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: '+';
+  display: inline-block;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  
+}
+.custom-file-input:hover::before {
+  border-color: var(--colorBlue);
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
